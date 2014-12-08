@@ -17,6 +17,12 @@ html, body {
 	z-index: -100;
 }
 
+// .container {
+//   @media (min-width: @screen-xs-min) {
+//     width: 480px;
+//   }
+// }
+
 @welcome-height: 500px;
 @card-img-height: 140px;
 #welcome {
@@ -31,10 +37,14 @@ html, body {
 	.inner-shadow(0, 0, 50px, 0.5);
 	padding: @welcome-height/4 100px;
 	#welcome-msg {
+		max-width: @global-width;
 		font-family: "Avenir Next";
 		text-shadow: 1px 2px 5px rgba(0,0,0,0.8);
+		margin-left: auto;
+		margin-right: auto;
 		h1 {
 			font-weight: 400;
+			font-size: 32px;
 			line-height: 1.5em;
 		}
 		i {
@@ -50,10 +60,19 @@ html, body {
 	//.step-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8) 10% rgba(0,0,0,0.3) 100%);
 	.gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8), rgba(0,0,0,0.3));
 }
+	
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}	
 
 .row {
   	padding: 20px 10px;
   	margin-top: 40px;
+  	max-width: @global-width;
+  	margin-left: auto;
+  	margin-right: auto;
   	h2.row-title {
   		padding: 0 7px;
   		margin: 10px 0;
@@ -97,11 +116,12 @@ html, body {
 			}
 		}
 		.card {
-			height: @card-img-height + 120px;
+			height: @card-img-height + 150px;
 			.rounded(5px);
 			.drop-shadow(2px, 10px, 15px, 1px, 0.2);
 			background-color: white;
 			padding: 20px;
+			overflow: hidden;
 			.img-container {
 				width: 100%;
 				height: @card-img-height;
@@ -144,10 +164,35 @@ html, body {
 	}
 }
 
+@media (max-width: @screen-sm) {
+	#welcome {
+		padding: @welcome-height/6 100px;
+		#welcome-msg {
+			h1 {
+				font-size: 28px;	
+			}
+			i {
+				font-size: 36px;
+			}
+		}	
+	}
 
+}
 
-
-
+@media (max-width: 550px) {
+	#welcome {
+		padding: @welcome-height/6 50px;
+		#welcome-msg {
+			h1 {
+				font-size: 20px;	
+			}
+			i {
+				font-size: 36px;
+				margin: 10px;
+			}
+		}	
+	}
+}
 
 
 
