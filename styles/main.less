@@ -31,11 +31,11 @@ html, body {
 	width: 100%;
 	color: rgba(255,255,255,0.9);
 	background-color: black;
-	background: url('../images/bg.jpg');
+	background: url('../images/bg3.jpg');
 	background-size: cover;
-	background-position: 50% 50%;
+	background-position: 40% 60%;
 	.inner-shadow(0, 0, 50px, 0.5);
-	padding: @welcome-height/4 100px;
+	padding: @welcome-height/3 100px;
 	#welcome-msg {
 		max-width: @global-width;
 		font-family: "Avenir Next";
@@ -43,13 +43,14 @@ html, body {
 		margin-left: auto;
 		margin-right: auto;
 		h1 {
-			font-weight: 400;
+			font-weight: 500;
 			font-size: 32px;
 			line-height: 1.5em;
 		}
 		i {
 			font-size: 50px;
-			margin: 30px;
+			margin-top: 50px;
+			font-weight: 300;
 		}		
 	}
 }
@@ -181,7 +182,7 @@ html, body {
 
 @media (max-width: 550px) {
 	#welcome {
-		padding: @welcome-height/6 50px;
+		padding: @welcome-height/4 50px;
 		#welcome-msg {
 			h1 {
 				font-size: 20px;	
